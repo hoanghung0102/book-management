@@ -1,0 +1,23 @@
+.row.content:nth-child(even) {
+    background: #f7f7f9
+}
+
+.row.content:nth-child(odd) {
+    background: #FFF
+}
+
+.row.content > div {
+    margin: auto;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.list-content {
+    padding: 30px;
+}
