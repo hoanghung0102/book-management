@@ -1,7 +1,8 @@
 # Book Management Application about technical & features
  - Springboot web app base on MVC pattern.
  - Using H2 database
- - Authentication user login
+ - Authentication user login by username and password
+ - Authorization link access by role
  - Create new user with defualt role is "USER"
  - CRUD Book
  
