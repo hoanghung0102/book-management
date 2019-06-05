@@ -21,7 +21,7 @@
  - After book list create success display book list with book had created
  - User can view, edit, delete book in book list page
  
- # Next step will be improvement
+ # Next steps will be improvement
  - Apply less/ sass css
  - Move on inline style to external css file
  - Improvement the style for application
