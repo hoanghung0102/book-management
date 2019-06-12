@@ -3,7 +3,6 @@ package com.hoanghung.bookmanagement.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 
 @Data
 @Entity
@@ -23,9 +22,9 @@ public class Book {
     private String description;
 
     @Column(nullable = false, name = "created_at")
-    private Timestamp createdAt;
+    private Long createdAt;
 
     @Column(name = "updated_at")
-    private Timestamp updatedAt;
+    private Long updatedAt;
 
 }

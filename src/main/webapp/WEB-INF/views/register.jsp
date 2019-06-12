@@ -11,7 +11,7 @@
 
     <link href="${contextPath}/webjars/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="/resources/css/style.css" rel="stylesheet">
-
+    <script src="${contextPath}/webjars/jquery/1.9.1/jquery.min.js"></script>
     <script src="${contextPath}/webjars/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 

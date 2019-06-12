@@ -49,10 +49,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                     .antMatchers("/h2-console/**").permitAll()
-                    .antMatchers("/resources/**").permitAll()
                     .antMatchers("/user/**").permitAll()
                     .antMatchers(HttpMethod.GET, "/book/**").hasAuthority("USER")
                     .antMatchers(HttpMethod.POST, "/book/**").hasAuthority("USER")
+                    .antMatchers(HttpMethod.DELETE, "/book/**").hasAuthority("USER")
                     .antMatchers(HttpMethod.GET, "/admin").hasAuthority("ADMIN")
                     .and()
                     .formLogin().loginPage("/login").permitAll()
@@ -66,6 +66,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web
                 .ignoring()
-                .antMatchers("/*.css", "/*.js");
+                .antMatchers("/resources/**");
     }
 }

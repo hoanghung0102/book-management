@@ -5,6 +5,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="${contextPath}/webjars/handlebars/4.0.2/handlebars.js"></script>
 </head>
 
 <body>
