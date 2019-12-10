@@ -62,6 +62,9 @@ function updateBookList(data, isEditBook) {
 }
 
 function deleteBook(id) {
+
+
+
     $.ajax({
         type: 'DELETE',
         url: '/book/delete/' + id,
