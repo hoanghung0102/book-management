@@ -2,6 +2,7 @@ package com.hoanghung.bookmanagement.controller;
 
 import com.hoanghung.bookmanagement.form.BookForm;
 import com.hoanghung.bookmanagement.model.Book;
+import com.hoanghung.bookmanagement.repository.BookRepository;
 import com.hoanghung.bookmanagement.service.BookService;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
@@ -20,6 +22,9 @@ public class BookController {
 
     @Autowired
     BookService bookService;
+
+    @Autowired
+    BookRepository bookRepository;
 
     @GetMapping( "/list")
     public String booksList(Model model) {
@@ -64,5 +69,13 @@ public class BookController {
         if (book != null) bookService.delete(book);
 
         return "Delete book " + book.getTitle() + "is success";
+    }
+
+    @GetMapping("search")
+    @ResponseBody
+    public List<Book> searchBook(
+            @RequestParam(name = "title") String title,
+            @RequestParam(name = "author") String author) {
+        return bookRepository.searchBook(title, author);
     }
 }
